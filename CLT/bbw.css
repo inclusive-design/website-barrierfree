@@ -1,0 +1,23 @@
+body {font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-weight: 800; background-color: #FFFFFF; text-align: left; font-size: 10px}
+
+h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-size: 25px}
+
+h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-size: 14px}
+
+p {font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-size: 14px}
+
+ol {font-family: font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-size: 14px; list-style : square inside}
+
+li{font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-size: 14px}
+
+ul {font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-size: 14px}
+
+td {{font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-size: 14px}
+
+blockquote {font-family: Times; font-size: 25px; font-style: italic; color:#660033}
+
+.bttm {font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-weight: 800; text-decoration: none; color: #000033}
+
+.bgmrgn {font-family: Arial, Helvetica, sans-serif; text-align: center; font-weight: bold; margin-left: 50px; font-size: 24px}
+
+.title {font-family: Arial, Helvetica, sans-serif; text-align: center; font-weight: bold; font-size: 18px}

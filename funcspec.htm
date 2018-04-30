@@ -1,0 +1,721 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+<meta http-equiv="Content-Type" content=
+"text/html; charset=iso-8859-1">
+<meta name="Author" content="Anastasia Cheetham">
+<meta name="GENERATOR" content=
+"Mozilla/4.75 [en] (Win98; U) [Netscape]">
+<title>Functional Specification</title>
+<link rel="stylesheet" href="specs.css" type="text/css">
+</head>
+<body>
+<center>
+<h1><span class="head">Creating Barrier-Free Broadband Learning
+Environments</span></h1>
+
+<h1>Functional Specification v2.5</h1>
+</center>
+
+<center>
+<p>edited by:</p>
+
+<p><a href="mailto:a.cheetham@utoronto.ca">Anastasia
+Cheetham</a><br>
+Project Technical Coordinator</p>
+
+<p>March 12, 2001</p>
+
+<hr width="50%">
+</center>
+
+<h1>Introduction</h1>
+
+<p>The purpose of this document is to specify the desired
+functionality of the various deliverables of the CANARIE project <a
+href="http://www.barrierfree.ca">Creating Barrier-Free Broadband
+Learning Environments</a>. This document will serve as a reference
+for the technical team implementing the systems.</p>
+
+<p>There are two 'classes' of intended users for this project:
+learners, who are primarily users of the Player deliverable, and
+educators, who are primarily users of the Authoring Tool
+deliverable.</p>
+
+<p>This document is presented in two sections. The first section
+describes the intended users of the systems, indicating the
+assumptions made regarding their abilities, and discussing the user
+characteristics which drive the functional specifications. The
+second section presents these specifications.</p>
+
+<h1>Target Learners</h1>
+
+<h2>Primary</h2>
+
+<p>The primary learners being targeted by this project are learners
+who are:</p>
+
+<ul>
+<li>Blind and low vision</li>
+
+<li>Deaf and hard of hearing</li>
+
+<li>Physical Disabilities</li>
+
+<li>Learning Disabilities</li>
+</ul>
+
+<p>The systems will be designed to directly address the needs of
+these groups.</p>
+
+<h2>Secondary</h2>
+
+<p>The secondary learners being targeted by this project are as
+follows:</p>
+
+<ul>
+<li>English as a second language</li>
+
+<li>Learners without disabilities</li>
+
+<li>Deaf-blind</li>
+</ul>
+
+<p>The systems will not attempt to directly address the needs of
+these groups, but effort will be made to avoid introducing new
+barriers for these groups.</p>
+
+<h2>Reading Level for Learners</h2>
+
+<p>It is assumed that the target learners will have a minimum Grade
+4 reading level.</p>
+
+<h2>Content Type</h2>
+
+<p>The content which will be used for evaluation of this project
+will be as follows:</p>
+
+<ul>
+<li>Physics: first 2 clusters of "World in Motion" series, 10
+videos initially</li>
+
+<li>Humanities: the best 3 of "Room for Five"</li>
+</ul>
+
+<h2>Primary Barriers and Requirements for Learners</h2>
+
+<p>The current primary barriers for learners are as follows:</p>
+
+<p>For deaf/hard of hearing learners:</p>
+
+<ul>
+<li>lack of captioned content</li>
+
+<li>lack of readable captions</li>
+
+<li>identification of speaker</li>
+
+<li>understanding language used</li>
+
+<li>understanding vocabulary used</li>
+
+<li>understanding concepts used</li>
+
+<li>speed of content/captions</li>
+</ul>
+
+<p>For blind/low vision learners:</p>
+
+<ul>
+<li>Math notation, Science notation, Geography maps, accounting
+charts</li>
+</ul>
+
+<p>Text to speech products have great difficulty with graphics
+environments (diagrams, charts, maps, etc.). When reading charts,
+it is sometimes difficult to read columns without a previous
+knowledge of how they should look.&nbsp; Also, alignment is most
+important with charts, and this has to be made clear to persons who
+are unable to see what the charts really look like.</p>
+
+<h2>Goals for Learners</h2>
+
+<p>The tasks that we want the learners to achieve with our
+curriculum and with our tools are as follows:</p>
+
+<ul>
+<li>Success understanding the content</li>
+
+<li>Greater academic success</li>
+
+<li>Easy use of tool</li>
+
+<li>Obtain support for using the tools</li>
+
+<li>For blind/low vision learners: obtain adequate descriptions of
+visual material</li>
+</ul>
+
+<h1>Target Educators</h1>
+
+<p>There are two types of target educators: the original content
+creators, and 'modifiers' who refine the content created by the
+content creators for their own purposes. The first group would
+include content developers and web designers. The second group
+would include teachers, students and captioners.</p>
+
+<h2>Technical Proficiency of Educators</h2>
+
+<p>It is assumed that the target educators will be:</p>
+
+<ul>
+<li>Web browsing literate</li>
+
+<li>Have word processing skills</li>
+
+<li>Have an awareness of students' needs</li>
+
+<li>Be technically savvy, and motivated</li>
+</ul>
+
+<h2>Primary Barriers and Requirements for Educators</h2>
+
+<p>The current primary barriers for educators are as follows:</p>
+
+<ul>
+<li>lack of support for creating content for multiple types and
+levels of learners</li>
+
+<li>lack of support for making "readable" captions</li>
+
+<li>lack of support for transcribing and insertion of captions</li>
+
+<li>lack of support for importing line 21 captioned content</li>
+
+<li>lack of support for different skill levels of creators</li>
+</ul>
+
+<h2>Goals for Educators</h2>
+
+<p>The tasks that we want the educators to achieve with our tools
+are as follows:</p>
+
+<ul>
+<li>create enhanced interactive content that includes hyperlinking
+captions</li>
+
+<li>address the varying needs of learners</li>
+
+<li>ease of use of authoring tools</li>
+</ul>
+
+<center>
+<p><br>
+</p>
+
+<hr width="50%">
+</center>
+
+<h1>Functional Requirements</h1>
+
+<p>This section describes the desired functionality from the user
+perspective (learner or educator, as appropriate), in terms of both
+the content itself, and the interface with the content. The desired
+functionality of the Player drives the functional requirements of
+the Authoring Tool.</p>
+
+<h2><a name="_content"></a>1 Content</h2>
+
+<p>This project involves enhancing digitized videos with various
+forms of learning objects including text captions, audio
+descriptions, and more. Several types of information will be
+presented to the learner:<br>
+&nbsp;</p>
+
+<dl>
+<dt>Main video</dt>
+
+<dd>In most cases, this is the original video-based learning
+material.</dd>
+
+<dt>Captions</dt>
+
+<dd>A verbatim text caption will be the base alternative format for
+the learning material. Alternatives to the verbatim caption may
+also be available, such as reduced reading level captions or
+alternate languages. For more information, see the section on <a
+href="#_textcaptions">Captions</a>.</dd>
+
+<dt>Audio descriptions</dt>
+
+<dd>Audio descriptions of the visual elements of the video will
+also be available. Like the text captions, different types of audio
+descriptions will be available, such as didactic and descriptive.
+For more information, see the section on <a href=
+"#_audiodesc">Audio Descriptions</a>.</dd>
+
+<dt>Sign translation</dt>
+
+<dd>A sign translation video image will be available. This may
+possibly consist of multiple images, if necessary to convey
+multiple speakers, etc.</dd>
+
+<dt>Markers</dt>
+
+<dd>Graphical overlays may be used by the author to draw the
+learner's attention to particular areas of the visual image or
+text.</dd>
+
+<dt>Graphics</dt>
+
+<dd>In addition to graphical overlays for highlighting purposes,
+other graphical images may be presented if deemed appropriate by
+the content author.</dd>
+
+<dt>Annotations</dt>
+
+<dd>The author/educator may add text annotations to the material to
+provide a form of commentary on the lecture. For learners with
+visual impairments, these annotations can be spoken aloud.</dd>
+
+<dt>Other</dt>
+
+<dd>Other, as yet defined information may be added as well.</dd>
+</dl>
+
+<p>
+Some of these media types are described in more detail below.</p>
+
+<h3><a name="_textcaptions"></a>1.1 Captions</h3>
+
+<p>Captions provide a non-auditory alternative to the audio portion
+of a video. Learners will be able to choose from alternative
+versions of text captions. Possibilities include (but are not
+limited to) the following:</p>
+
+<ol type="a">
+<li>Verbatim caption</li>
+
+<li>Speed-Reduced caption</li>
+
+<li>Modified Reading Level caption</li>
+
+<li>Multilingual versions of the above types of captions</li>
+
+<li>Other</li>
+</ol>
+
+<p>In some cases, multiple versions of a type of caption may be
+used. For example, if the original audio is in English, there will
+be only one verbatim caption, in English, but there may be several
+multilingual captions, each in a different language. Similarly,
+several different reading level captions may be used. See the
+section entitled <a href="#_usercontrol">Learner Controls</a> for
+information on learner selection of captions.</p>
+
+<p>Text captions will be able to include graphical images, and
+hyperlinks to other material (see the section entitled <a href=
+"#_links">Hyperlinks</a> for more details).</p>
+
+<p>The presentation of text captions will be defined by the content
+author using the <a href="#_authprefs">Authoring Tool</a>, and will
+to some extent be configurable by the learner using the <a href=
+"#_usercontrol">Player</a>. The presentation features which will be
+configurable are:</p>
+
+<ul>
+<li>Background</li>
+
+<ul>
+<li>Shading</li>
+
+<li>Transparency/opaque and colour options</li>
+
+<li>No background</li>
+</ul>
+</li>
+
+<li>Background shape</li>
+
+<ul>
+<li>Standard rectangle edit box</li>
+
+<li>Text background wraps to text on each line (TV broadcast pop-up
+captions)</li>
+
+<li>Speech bubble and other shapes</li>
+</ul>
+</li>
+
+<li>Font face (all available fonts including non-latin fonts)</li>
+
+<li>Font size, style, colour</li>
+</ul>
+
+<p>
+<a name="_captionposition"></a>Text captions will appear in one of
+several preset positions in the Player window:</p>
+
+<ol type="a">
+<li>Outside of the video frame of the movie container window.&nbsp;
+For instance, in the black border below, above or to the side of
+the video frame.</li>
+
+<li>Inside of the video frame of the movie container window</li>
+
+<li>Overlapping the video frame of the movie container window</li>
+
+<li>In an HTML-based text field outside of the movie container
+window</li>
+
+<li>In an HTML-based scrollable caption storage field outside of
+the movie container window.&nbsp; This window accumulates all the
+captions for the video.&nbsp; The caption storage field contents
+may be selected and copied to clipboard.&nbsp; The contents of this
+field may also be saved as a file.</li>
+</ol>
+
+<p>More information on learner control of the positioning and
+formatting of captions is presented in the section entitled <a
+href="#_usercontrol">Learner Controls</a>.</p>
+
+<h3><a name="_audiodesc"></a>1.2 Audio Descriptions</h3>
+
+<p>Audio descriptions provide non-visual alternatives to the visual
+content of the video. The following types of audio descriptions
+will be predefined:</p>
+
+<dl>
+<dt>Standard</dt>
+
+<dd>This description will contain a typical audio description of
+the visual elements, designed to fit into the quiet times of the
+video.</dd>
+
+<dt>Expanded</dt>
+
+<dd>This description will contain a typical audio description of
+the visual elements, but will not be limited in length to the
+available quiet time (see further explanation <a href=
+"#_auddescexpl">below</a>).</dd>
+
+<dt>Multilingual versions of the above types of descriptions</dt>
+
+<dd>These descriptions would contain, to the extent possible, the
+same content as those described above, but in alternative
+languages.</dd>
+</dl>
+
+<p>Two further classifications of audio description will also be
+possible:</p>
+
+<dl>
+<dt>Didactic</dt>
+
+<dd>This description will contain the strictly educational content
+of the visual scene, that is, a description of only (and all) that
+which is necessary to understand the intended educational
+lesson.</dd>
+
+<dt>Extra</dt>
+
+<dd>This description will contain any extra description, not
+contained in the didactic description, which might be appropriate,
+such as descriptions of the scene, the appearance of the
+characters, etc.</dd>
+</dl>
+
+<a name="_auddescexpl"></a>
+<p>The expanded version of the audio description will not be edited
+to fit into the quiet time available in the original audio.&nbsp;
+Presentation of this content will be carried out in one of two
+ways, based on the learner's preference:</p>
+
+<ul>
+<li>the original material will automatically be paused while the
+audio description plays, and playback will resume automatically
+once the audio description is complete; or</li>
+
+<li>the learner will be informed of the presence of additional
+audio description by an audio tone, and may opt to pause the
+original playback to listen to the audio description if they
+desire.</li>
+</ul>
+
+<h3><a name="_annotations"></a>1.3 Annotations</h3>
+
+<p>Annotations are very similar to text captions, except that they
+will typically be composed by the teacher, and serve to provide
+supplementary information, as opposed to alternative formats of the
+primary information. Characteristics such as font features and
+screen positioning are the same as those for captions.</p>
+
+<h3><a name="_links"></a>1.4 Hyperlinks</h3>
+
+<p>Any text in a text caption or annotation, or any graphical
+image, can be a hyperlink. Unlike traditional web-based hyperlinks,
+caption hyperlinks will have up to four types of information
+associated with them:</p>
+
+<ol>
+<li>Definition</li>
+<dl>
+<dd>a text definition of the word or phrase</dd>
+</dl>
+</li>
+
+<li>Interactive exercise</li>
+<dl>
+<dd>an interactive exercise designed to illustrate a concept or
+idea</dd>
+</dl>
+</li>
+
+<li>Background information</li>
+<dl>
+<dd>text presentation of related information which may be helpful
+in understanding the word or phrase</dd>
+</dl>
+</li>
+
+<li>Related link(s)</li>
+<dl>
+<dd>hypertext link(s) to web page(s) containing material related to
+the word or phrase</dd>
+</dl>
+</li>
+</ol>
+
+<p>
+A hyperlink may also be used to take the learner to another
+location in the presentation.</p>
+
+<p>Information about the presentation and activation of hyperlinks
+is provided in the Player section on <a href=
+"#_hyperlinks">hyperlinks</a>.</p>
+
+<h2>2 Player</h2>
+
+<p>The Player is the interface through which the learner interacts
+with the educational material.</p>
+
+<h3>2.1 Layout</h3>
+
+<p>The educational material contains several types of media, from
+video to text to graphics. The Player will control the layout of
+this information on the screen, and process the learner's
+interaction with the material.</p>
+
+<p>Through the Player, the learner will be able to select which of
+the available forms of <a href="#_content">content</a> they wish to
+view, as well as the format used to present this information (see
+<a href="#_usercontrol">Learner Controls</a> for more information).
+As well, other information will be presented in the Player window
+if the learner chooses. These include:</p>
+
+<ul>
+<li>the full caption text, presented in a separate area of the
+screen,</li>
+
+<li>a full list of all links contained in the caption,</li>
+
+<li>the author's annotations,</li>
+
+<li>the learner's own notes (see <a href="#_notes">Learner
+Notes</a> for more information on learner notes),</li>
+
+<li>indication of where in the lecture the learner is currently
+(e.g. title/section etc),</li>
+
+<li>navigational controls</li>
+</ul>
+
+<h3>2.2 Navigation</h3>
+
+<p>The learner will have the ability to navigate the video
+presentation. Specifically, learners will be able to:</p>
+
+<ol>
+<li>start, stop and pause playback;</li>
+
+<li>warp immediately to the beginning or end of the video;</li>
+
+<li>move to different, arbitrary positions in the video;</li>
+
+<li>increase the playback rate to advance the video more
+quickly;</li>
+
+<li>move directly to meaningful locations within the video, such as
+beginning of chapters, sections;</li>
+
+<li>search for words in captions and move from section to section
+containing that word; and</li>
+
+<li>activate <a href="#_links">links</a> for access to the
+associated information</li>
+</ol>
+
+<h3><a name="_hyperlinks"></a>2.3 Hyperlinks</h3>
+
+<p>When a learner activates a hyperlink, the playback of the
+educational material will pause, and the learner will be presented
+with a list of the available information associated with that link
+(as described above), and will be able to select from that
+list.</p>
+
+<p>A list of all of the links in a presentation will be available
+to the learner at all times, in a separate area of the display. The
+learner will be able to navigate directly to the location in the
+material where a link appears using this list.</p>
+
+<p>For learnerw with visual impairments, an audio indication will
+be played when links are presented on screen. Learners will be able
+to pause the playback, and hear a list of the links available in
+the current phrase of the caption, presented using text-to-speech
+(TTS). Activation of the link will cause the associated information
+to be read using TTS.</p>
+
+<h3><a name="_learnercaptions"></a>2.4 Learner-Created
+Captions</h3>
+
+Learner has access to limited authoring tool and can make custom
+caption text tracks to share with other learners. The tool will not
+allow for more elaborate kinds of caption creation such as variable
+positioning over the video. The caption track is saved as a file
+which can be added to the Learning Objects Repository. 
+
+<h3><a name="_notes"></a>2.5 Learner Notes</h3>
+
+Learners will be able to 'take notes' while viewing a video. These
+notes will be kept locally (i.e. not uploaded to the Learning
+Objects Repository), and will be available on future playbacks of
+the same material. Notes differ from <a href=
+"#_learnercaptions">Learner-Created Captions</a> in that they are
+intended for personal use, not for presentation to other learners,
+and are not overlaid on top of the video as captions are. 
+
+<p>Learners will create notes by pausing the video at the desired
+time, entering the desired note (for example, by typing), and
+saving the note. Learners may enter text into notes, and may mark
+text with a hyperlink to other material. Learners may not embed
+images or other non-text elements directly into notes.</p>
+
+<p>The note will be time stamped at the specified location for
+synchronization in later playbacks.</p>
+
+<p>The learner will be able to specify whether or not notes are
+displayed in the Player window. If so, the notes will be presented
+in a text list, and learners will be able to navigate to the video
+portion associated with any given note by selecting the note from
+the list. During playback of a video that has notes, an indication
+(visual and/or auditory) will be made when/where notes have been
+added. Learners will be able to select whether they would like
+visual cues, auditory cues, or both.</p>
+
+<p>Learners will also be able to use the player to view their own
+notes without viewing the associated learning materials.</p>
+
+<h3>2.6 Alternative Outputs</h3>
+
+The Player will support devices such as refreshable braille, text
+to speech, haptic devices, as well as output in various accessible
+medium. It will be compatible with current adaptive technology
+text/screen readers (Jaws), Screen enlargers, etc. or will
+implement an equivalent functionality. 
+
+<h3><a name="_usercontrol"></a>2.7 Learner Preferences</h3>
+
+To the extent permitted by the author (see <a href=
+"#_authprefs">explanation</a>), the learner will have the ability
+to select what information presented, and how it is presented.
+Specifically: 
+
+<ol>
+<li>Learners will be able to specify which alternative formats
+(captions and/or audio descriptions) they wish to be presented.
+They may select to display more than one text caption
+simultaneously. For example, a student learning English as a second
+language may wish to display both the English captions and the
+captions in their own language. The learner may select alternative
+audio captions with reduced background sound for greater
+understanding.</li>
+
+<li>Learners will be able to define the appearance of the text
+captions. For example, a learner with low vision may prefer a very
+large font size, or a particular colour combination.</li>
+
+<li>Learners may control the placement of text captions, as <a
+href="#_captionposition">described above</a>.</li>
+
+<li>Learners will be able to adjust the positioning of the video
+images (main video and sign language interpretation)</li>
+</ol>
+
+<p>Learners will be able to specify their preferences for
+configurable features using a Learner Preferences System. These
+preferences will be used whenever the learner uses the Player to
+view content.</p>
+
+<p>The learner will be able to modify a subset of the attributes
+'on the fly', using either on-screen widgets or keystrokes. The
+attributes which will be modifiable this way include:</p>
+
+<ol>
+<li>Turning captions on or off</li>
+
+<li>Choose condensed versus full captions</li>
+
+<li>Positioning video images and text captions</li>
+
+<li>Setting the audio volume</li>
+</ol>
+
+<p>
+These changes will apply only to the current session.</p>
+
+<h2>3 Authoring Tool</h2>
+
+The authoring tool will allow authors to classify captions
+according to their functions (e.g. language, reading level). The
+author will be able to define new custom caption types if so
+desired. 
+
+<p>Authors will be able to individually configure the attributes of
+text-based captions, including font face, size, colour and
+background colour, and container type.</p>
+
+<p>For each visual track (including text-based captions and
+graphics) authors will be able to specify the position, on screen,
+of the caption. The authoring tool may add a blank area around the
+original video that could be used for placement of caption items
+which are desired to be NOT overlaid on top of the video. Even if
+the author specifies a default position which is overlaid, this
+border will remain, so that the user may override the positioning
+and place the caption outside the video.</p>
+
+<p><a name="_authprefs"></a>Because authors may wish to use the
+position or formatting of captions to convey information, the
+ability of the learner to specify their own preferences for these
+attributes creates the risk that such information may be lost. For
+this reason, the author will be able to specify whether or not the
+specified formatting of captions may be overridden by the user.
+Three levels will be used:</p>
+
+<ol>
+<li>Cannot be overridden at all</li>
+
+<li>May be overridden, but user will be warned that this action may
+result in loss of information</li>
+
+<li>May be overridden without warning</li>
+</ol>
+
+<center>
+
+<p><br></p>
+<hr width="80%">
+</center>
+
+</body>
+</html>
+

@@ -1,0 +1,206 @@
+<html>
+
+<head>
+
+<title>LTA &amp; ATRC Partners in Barrierfree Learning - Tools</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" href="bbw.css">
+
+</head>
+
+<body bgcolor="#CCCCCC">
+
+<table width="45" border="2" align="center" cellpadding="5" cellspacing="0" bordercolor="#336699" bgcolor="#FFFFFF">
+  <tr> 
+    <td width="607" align="center" valign="top"> <div align="center"><img src="images/banner-top.gif" alt="Barrierfree top banner" width="605" height="85"></div>
+      <div align="left"> 
+        <h1>Barrier-Free Project</h1>
+      </div>
+      <div align="left">
+        <h2>The Barrier-Free Project produced the following deliverables:</h2>
+      </div>
+      <div align="left">
+        <UL>
+          <LI><A HREF="#author">Authoring Tools</A></LI>
+          <LI><A HREF="#player">Player</A></LI>
+          <LI><A HREF="#user">Learner Preferences</A></LI>
+          <LI><A HREF="#data">Learning Object Repository</A></LI>
+          <LI><A HREF="#vid">Accessible and Customizable Educational Videos</A></LI>
+        </UL>
+      </div>
+      <div align="left"> 
+        <H3><A NAME="author"></A>Authoring Tools</H3>
+        <P align="left"> This Java application allows educators and content developers 
+          to combine individual learning objects into a multi-layer, interactive 
+          presentation. The Authoring Tool can be used to:</P>
+      </div>
+      <div align="left"> 
+        <UL>
+          <LI>supplement a video presentation with alternative modalities, including 
+            <UL>
+              <LI>multiple text caption tracks (e.g. different languages, different 
+                reading levels)</LI>
+              <LI>multiple audio descriptions (e.g. different languages, etc.)</LI>
+              <LI>alternate videos (e.g. ASL translation)</LI>
+            </UL>
+          </LI>
+          <LI> add instructor annotations</LI>
+          <LI>add hyperlinks to supplementary information, such as definitions 
+            and web-based material</LI>
+          <LI>add graphic overlays, such as diagrams, or highlight indicators</LI>
+        </UL>
+      </div>
+      <P align="left">The Authoring Tool is integrated with the Repository, allowing 
+        the user to search the Repository for learning objects which could be 
+        added to the presentation. The Authoring Tool also creates metadata for 
+        the presentation, allowing it to be uploaded to the Repository for other 
+        to use and customize.</P>
+      <P align="left">The following screen shot shows one view of the current 
+        iteration of the authoring tool:</P>
+      <P ALIGN="center"><IMG SRC="images/authtool-addlinks.png"
+				WIDTH="500" HEIGHT="375"
+				ALT="Screen shot showing one view of the authoring tool" BORDER="1"></P>
+      <H3 align="left"><A NAME="player"></A>Player</H3>
+      <P align="left"> This Java application allows learners to access education 
+        material authored using the Authoring Tool, and configure it according 
+        to their own learning preferences, as specified in the Learner Preferences.</P>
+      <P align="left"> The Player will load the learner's selected content from 
+        the Repository and configure it according the the learner's presentation 
+        preferences. The Player also provides the learner with access to the navigational 
+        structure of the presentation, allowing the learner to review the material 
+        in a non-linear fashion by navigating directly to any section of the presentation.</P>
+      <P align="left"> The Player allows the learner to modify their content and 
+        presentation preferences while reviewing the presentation, so that for 
+        example, the learner may decide to turn the instructor annotations on 
+        or off while viewing.</P>
+      <P align="left"> The Player presents the hyperlinks in the presentation 
+        to the learner, allowing them to follow the links to view the supplementary 
+        information as they desire.</P>
+      <P align="left">The following screen shot shows one view of the current 
+        iteration of the player:</P>
+      <P ALIGN="center"><IMG SRC="images/player-cap.png" WIDTH="500"
+				HEIGHT="343" ALT="Screen shot showing one view of the player" BORDER="1"></P>
+      <H3 align="left"><A NAME="user"></A>Learner Preferences</H3>
+      <P align="left"> The learner's personal preferences, stored using XML and 
+        CSS, are used to allow the learner to specify their own choices for selection 
+        and presentation of the material in the educational presentation.</P>
+      <P align="left"> The learner can specify whether or not they wish to view 
+        a text caption, or hear an audio description, and express their preference 
+        for which version of the supplementary material they prefer, based on 
+        language preferences, and other factors such as reading level. They can 
+        indicate whether or not they wish to view any instructor annotation, or 
+        supplementary images.</P>
+      <P align="left"> In addition to specifying preferences for selection of 
+        content, the learner can specify how they wish to have that content presented 
+        to them. For example, the appearance of text content can be customized, 
+        given different colour schemes, font sizes, and placement on-screen.</P>
+      <P align="left">The following screen shot shows one view of the current 
+        iteration of the learner preferences interface:</P>
+      <P ALIGN="center"><IMG SRC="images/prefs.png" WIDTH="500"
+				HEIGHT="375" ALT="Screen shot showing learner preferences interface"
+				BORDER="1"></P>
+      <H3 align="left"><A NAME="data"></A>Learning Object Repository</H3>
+      <P align="left">The functionality of the repository is being expanded, to 
+        reflect feedback from user evaluations.</P>
+      <P align="left">The Learning Object Repository is designed to provide services 
+        to three classes of user:</P>
+      <div align="left"> 
+        <OL>
+          <LI>End users accessing the repository from a web-based search page 
+            with an "off-the-shelf" browser such as Internet Explorer or Netscape.</LI>
+          <LI>Authors of the complex learning objects who will be using the Authoring 
+            Tool.</LI>
+          <LI> End users who access the repository via Player.</LI>
+        </OL>
+      </div>
+      <P align="left">The following screen shot shows one view of the repository 
+        search user interface:</P>
+      <P ALIGN="center"><IMG SRC="images/authtool-search-repos.png"
+				WIDTH="500" HEIGHT="375" ALT="Screen shot showing repository search interface"
+				BORDER="1"></P>
+      <P align="left">The repository is organized around a three tier architecture.</P>
+      <P align="left"> The first tier is the database itself. The current implementation 
+        uses Oracle 8i, although the three-tier architecture will make it possible 
+        to replace the present database component with an object-oriented database 
+        or some of the XML databases currently being developed. </P>
+      <P align="left">The database supports</P>
+      <div align="left"> 
+        <UL>
+          <LI> the storage of XML data in database fields. </LI>
+          <LI> the ability to search on textual data in much the same way as users 
+            have become accustomed to when using a web-based search engine.</LI>
+          <LI>storing large objects such as video and audio files.</LI>
+          <LI>maintaining relationships among database objects.</LI>
+        </UL>
+      </div>
+      <P align="left"> The second tier of the learning repository is a "server". 
+        The server communicates with the database component using JDBC (Java Database 
+        Connectivity) and communicates with other software components (the authoring 
+        tool and the player) via Java RMI (Remote Method Invocation). To programmers, 
+        the database appears as an object. The server also manages the communication 
+        with the web-based end users. </P>
+      <P align="left">The third tier of the repository is the client software 
+        which runs on the computers used by the end users. </P>
+      <P align="left">The database itself contains two major types of components:</P>
+      <P align="left"> "Primitive" objects with associated metadata. Examples 
+        of these primitive objects are videos, caption tracks, text, audio, and 
+        graphics. The metadata which describes them is represented as IMS compatible 
+        XML and includes:</P>
+      <div align="left"> 
+        <UL>
+          <LI>general information such as title, language, description, keywords, 
+            etc.</LI>
+          <LI> technical information about the resource such as mime type, operating 
+            system requirements, etc.</LI>
+          <LI>educational information such as grade level, interactivity level, 
+            typical learning time, etc.</LI>
+        </UL>
+      </div>
+      <P align="left"> The second of the two major database components is what 
+        we call an assembly object. Assembly objects represent collections of 
+        the primitive objects described above and may include other assembly objects. 
+      </P>
+      <P align="left">Like the primitive objects, assembly objects are described 
+        by XML metadata. This metadata includes:</P>
+      <div align="left"> 
+        <UL>
+          <LI> information about the object as a whole. This information is similar 
+            in form and content to metadata describing the primitive objects.</LI>
+          <LI>author preferences.</LI>
+          <LI>for each learning object 
+            <UL>
+              <LI>a reference pointer to it.</LI>
+              <LI>start time and duration information.</LI>
+              <LI>positioning and layering information.</LI>
+            </UL>
+          </LI>
+        </UL>
+      </div>
+      <P align="left"> The database builds indices on the XML metadata fields 
+        and attributes which permit rapid searches by end users on any IMS or 
+        CANCORE metadata field. </P>
+      <P align="left">Free text indices are also built on caption track data permitting 
+        more precise searches.</P>
+      <H3 align="left"><A NAME="vid"></A>Accessible and Customizable Educational 
+        Videos</H3>
+      <P align="left">The tool and player developed by this project have an important 
+        end goal in mind- the production of accessible and customizable interactive 
+        educational videos. Teacher/authors can use the authoring tool to create 
+        educational videos customized with content related to their own particular 
+        classroom, and designed to meet their partucular student's learning needs. 
+        Students, as learners, can set their own user preferences and engage in 
+        supplementary materials that assist them in their learning. In order to 
+        illustrate the usefulness of these ideals, the partners involved in this 
+        project have collaborated and developed a sample half-hour video. Episode 
+        one of the Canadian Learning Television series "Physics- A World in Motion" 
+        has been enhanced with caption tracks, audio descriptions and a broad 
+        range of supplementary learning materials, including web-based simulations, 
+        diagrams, tables, charts and haptics exercises. This video represents 
+        the power of being able to transform learning materials to meet the individual 
+        needs of both the instructor and the learners.</P></tr>
+</table>
+</body>
+</html>
+

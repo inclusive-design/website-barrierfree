@@ -1,0 +1,197 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<lom xmlns = "http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation = "http://www.imsglobal.org/xsd/imsmd_rootv1p2p1  imsmd_rootv1p2p1.xsd">
+	<general>
+		<identifier>This will be replaced when the learning object is submitted to the repository</identifier>
+		<title>
+			<langstring>Replace this text with the title of the learning object</langstring>
+		</title>
+		<catalogentry>
+			<catalog>Replace this text with the name of a catalog (e.g. "ISBN")</catalog>
+			<entry>
+				<langstring>Replace this entry with the value of the catalog entry (e.g. the ISBN number)</langstring>
+			</entry>
+		</catalogentry>
+		<language>Enter the primary languages of this learning object, as a list (e.g. English, French)</language>
+		<description>
+			<langstring>Replace this text with a narrative description of the learning object</langstring>
+		</description>
+	</general>
+	<lifecycle>
+		<version>
+			<langstring>Replace this text with the edition of the learning object</langstring>
+		</version>
+		<contribute>
+			<role>
+				<source>
+					<langstring>LOMv1.0</langstring>
+				</source>
+				<value>
+					<langstring>Replace this text with the 'role' of the contributor, one of: Author, Publisher, Unknown, Initiator, Terminator, Validator, Editor, Graphical Designer, Technical Implementer, Content Provider, Technical Validator, Educational Validator, Script Writer, Instructional Designer</langstring>
+				</value>
+			</role>
+			<centity>
+				<vcard>Fill in the vCard data of the contributor here</vcard>
+			</centity>
+			<date>
+				<datetime>Replace this text with the date of the contribution e.g. "2001-02-01"</datetime>
+			</date>
+		</contribute>
+	</lifecycle>
+	<metametadata>
+		<identifier/>
+		<catalogentry>
+			<catalog/>
+			<entry>
+				<langstring/>
+			</entry>
+		</catalogentry>
+		<contribute>
+			<role>
+				<source>
+					<langstring>LOMv1.0</langstring>
+				</source>
+				<value>
+					<langstring>Creator</langstring>
+				</value>
+			</role>
+		</contribute>
+		<centity>
+			<vcard>Fill in the vCard data of the metadata creator (i.e. yourself) &lt;vcard>BEGIN:vCard N:LASTNAME;FIRSTNAMEEND:vCard&lt;/vcard></vcard>
+		</centity>
+		<date>
+			<datetime>Replace this text with today's date e.g. "2003-04-04"</datetime>
+		</date>
+		<metadatascheme>CanCore 1.0</metadatascheme>
+		<metadatascheme>IMS MD 1.2.1</metadatascheme>
+		<language>English</language>
+	</metametadata>
+	<technical>
+		<format>Replace this text with the technical data type of the resource, namely a mime type</format>
+		<size>Replace this text with the size of the resource, as a number (e.g. 44268)</size>
+		<location>Replace this text with a URL to the resource</location>
+		<otherplatformrequirements>
+			<langstring>Replace this text with information about other software and hardware requirements. </langstring>
+		</otherplatformrequirements>
+		<duration>
+			<datetime>Replace this text with the time it would take to play this resource at its intended speed, in seconds (if applicable)</datetime>
+		</duration>
+	</technical>
+	<educational>
+		<learningresourcetype>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Replace this text with the type of the resource, one of: Exercise, Simulation, Questionnaire, Diagram, Figure, Graph, Index, Slide, Table, Narrative Text, Exam, Experiment, ProblemStatement, SelfAssesment</langstring>
+			</value>
+		</learningresourcetype>
+		<learningresourcetype>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Replace this text with the type of the resource, one of: Exercise, Simulation, Questionnaire, Diagram, Figure, Graph, Index, Slide, Table, Narrative Text, Exam, Experiment, ProblemStatement, SelfAssesment</langstring>
+			</value>
+		</learningresourcetype>
+		<intendedenduserrole>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Replace this text with the intended user role, one of: Teacher, Author, Learner, Manager</langstring>
+			</value>
+		</intendedenduserrole>
+		<intendedenduserrole>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Replace this text with the intended user role, one of: Teacher, Author, Learner, Manager</langstring>
+			</value>
+		</intendedenduserrole>
+		<context>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Replace this text with the educational context for the resource, one of: Primary Education, Secondary Education, Higher Education, University First Cycle, University Second Cycle, University Postgrade, Technical School First Cycle, Technical School Second Cycle, Professional Formation, Continuous Formation, Vocational Training </langstring>
+			</value>
+		</context>
+		<context>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Replace this text with the educational context for the resource, one of: Primary Education, Secondary Education, Higher Education, University First Cycle, University Second Cycle, University Postgrade, Technical School First Cycle, Technical School Second Cycle, Professional Formation, Continuous Formation, Vocational Training </langstring>
+			</value>
+		</context>
+		<typicalagerange>
+			<langstring>Replace this text with a description of the age of the typical intended user (e.g "children under 7", "adult only")</langstring>
+		</typicalagerange>
+		<language>Replace this text with the intended user's natural language</language>
+	</educational>
+	<rights>
+		<cost>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Replace this text with either "yes" or "no" indicating whether use of the resource requires payment</langstring>
+			</value>
+		</cost>
+		<copyrightandotherrestrictions>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Replace this text with either "yes" or "no" indicating whether copyright or other restrictions apply </langstring>
+			</value>
+		</copyrightandotherrestrictions>
+		<description>
+			<langstring>Replace this text with comments on the conditions of use of the resource </langstring>
+		</description>
+	</rights>
+	<relation>
+		<kind>
+			<source>
+				<langstring>Dublin Core</langstring>
+			</source>
+			<value>
+				<langstring>Replace this text with one of: IsPartOf, HasPart, IsVersionOf, HasVersion, IsFormatOf, HasFormat, References, IsReferencedBy, IsBasedOn, IsBasisFor, Requires, IsRequiredBy </langstring>
+			</value>
+		</kind>
+		<resource>
+			<identifier>This will be replaced when the learning object is submitted to the repository</identifier>
+			<catalogentry>
+				<catalog>Replace this text with the name of a catalog (e.g. "ISBN")</catalog>
+				<entry>
+					<langstring>Replace this entry with the value of the catalog entry (e.g. the ISBN number)</langstring>
+				</entry>
+			</catalogentry>
+		</resource>
+	</relation>
+	<classification>
+		<purpose>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Replace this text with one of: Discipline, Idea, Prerequisite, Educational Objective, Accessibility Restrictions, Educational Level, Skill Level, Security Level </langstring>
+			</value>
+		</purpose>
+		<taxonpath>
+			<source>
+				<langstring>Replace this text with the name of a recognized taxonomy e.g. ACM, MESH...</langstring>
+			</source>
+			<taxon>
+				<id>Replace this text with the taxon's identifier in taxonomic system</id>
+				<entry>
+					<langstring>Replace this text with the taxon's name or label (other than identifier) </langstring>
+				</entry>
+			</taxon>
+		</taxonpath>
+		<keyword>
+			<langstring>Replace this text with a keyword description of learning objective relative to its stated purpose </langstring>
+		</keyword>
+	</classification>
+</lom>

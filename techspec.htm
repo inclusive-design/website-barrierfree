@@ -1,0 +1,647 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Anastasia Cheetham">
+   <title>Barrier-Free Learning: Technical Specification</title>
+<link rel="stylesheet" href="specs.css" type="text/css">
+</head>
+<body>
+
+<center>
+<h1>
+<span class="head">Creating Barrier-Free Broadband Learning Environments</span></h1></center>
+
+<center>
+<h1>
+Software Design Document<br>
+Draft 0.2</h1></center>
+
+<center>edited by:
+<p><a href="mailto:a.cheetham@utoronto.ca">Anastasia Cheetham</a>
+<br>Project Technical Coordinator
+<p>March 13, 2001</center>
+
+<p>[ Editor's note: This document is incomplete. Some sections have not
+been written yet. As information becomes available, it will be added to
+this document. ]
+<center>
+<hr width="50%"></center>
+
+<h1>
+1 Introduction</h1>
+
+<h2>
+1.1 Project Overview</h2>
+The purpose of this document is to define the technical specifications
+of the deliverables of the CANARIE project <a href="http://www.barrierfree.ca">Creating
+Barrier-Free Broadband Learning Environments</a>. This document will serve
+as a reference for the technical team who will be creating the software.
+<h2>
+1.2 References and Applicable Documents</h2>
+This document defines the implementation of the system described in the
+Functional Specification, which can be found at <a href="http://snow.utoronto.ca/barrier-free/admin/docs/CanarieFuncSpec2.5.html">http://snow.utoronto.ca/barrier-free/admin/docs/CanarieFuncSpec2.5.html</a>.
+Note that both the functional and technical specifications are regularly
+being revised to reflect changes made since it was originally posted.
+<p>The format of this document is in general conformance with recommended
+practices for describing software designs as presented in <i>IEEE Standards
+1016, IEEE Recommended Practice for Software Design Descriptions</i>.
+<h2>
+1.3 Definitions, Abbreviations, and Acronyms</h2>
+
+<dl>
+<dt>
+assembly object</dt>
+
+<dd>
+a special purpose learning object which references other learning objects
+(including assembly object) to define a more complex learning object</dd>
+
+<dt>
+canvas</dt>
+
+<dd>
+the space in which learning object will visually appear</dd>
+
+<dt>
+learning object</dt>
+
+<dd>
+an object (for example, a video, an image, a text file, etc.) which is
+useful as an educational tool</dd>
+
+<dt>
+phrase</dt>
+
+<dd>
+the lowest level of division of a text caption, as defined by the caption
+time codes; used as the lowest level of granularity for navigation</dd>
+
+<dt>
+SMIL</dt>
+
+<dd>
+Synchronized Multimedia Integration Language</dd>
+
+<dt>
+XML</dt>
+
+<dd>
+eXtensible Markup Language</dd>
+</dl>
+
+<h1>
+2 System Design Description Overview</h1>
+The specific deliverables of this project are:
+<ol>
+<li>
+Player</li>
+
+<li>
+Authoring Tool</li>
+
+<li>
+Preference System</li>
+
+<li>
+Learning Object Repository</li>
+</ol>
+<p><a href="#_figureOverivew">Figure 1</a> provides an overview of the interaction
+between these components. In this figure, the Learning Objects Repository
+contains the various learning materials that can be combined to produce
+the interactive curriculum. The Authoring Tool is used to combine these
+element, producing an assembly learning object, which is also stored in
+the repository. Learners use the Player to view the presentation defined
+by the assembly object, using the User Preferences system to configure
+the presentation of the material. The Player will also access the Learning
+Objects Repository to access learning materials referenced by the assembly
+object.</p>
+<center>
+<p><a NAME="_figureOverivew"></a><img SRC="overview.gif" ALT="diagram showing interaction between the various components of the system" height=634 width=469>
+<br>Figure 1 - System Overview</center>
+
+<h2>
+<a NAME="_media"></a>2.1 Media Types</h2>
+A review of the functional specifications for the captioning system reveal
+several types of media which will be assembled by the Authoring Tool, and
+presented to the learner through the Player. These media types are:
+
+<ol>
+<li>
+Main video</li>
+
+<li>
+Captions</li>
+
+<li>
+Audio descriptions</li>
+
+<li>
+Sign translation</li>
+
+<li>
+Markers</li>
+
+<li>
+Graphics</li>
+
+<li>
+Annotations</li>
+
+<li>
+Other</li>
+</ol>
+
+<p>These media types are described in the <a href="funcspec.html#_content">Functional
+Specification</a>.</p>
+
+<h2>
+2.2 Authoring Tool</h2>
+The 'authoring tool' will be a set of technologies which will plug in to
+existing authoring environments. These technologies will be structured
+as editor classes, each designed to edit one of the media types. When an
+author selects a media type to add to the video, they will be presented
+with an appropriate editor for that media type. Practically, the same editor
+may be used for more than one media type if the media types and the necessary
+editing capabilities are similar enough.
+<p>The authoring tool editor classes will be designed to be independent
+of the authoring tool they are being plugged in to. A translation layer
+will be created for any tools, as illustrated in
+<a href="#_editorApi">Figure 2</a>.
+
+<center>
+<p><a NAME="_editorApi"></a><img SRC="editor-api.gif" ALT="diagram showing the API layer in the editor class architecture" height=208 width=415>
+<br>Figure 2 - Editor class architecture</center>
+
+<h2>
+2.3 Player</h2>
+<p>The Player will compose the various learning objects defined by the author
+and selected by the learner onto a form of 'canvas' that is the Player
+'space'. The Player will also control the layout of all screen elements,
+including HTML representation of caption text, table of contents, etc.</p>
+<p>The Player will be implemented in one of 2 ways:</p>
+<ol>
+<li>
+a Java applet running in the Mozilla browser</li>
+<li>
+Mozilla as a Java Bean embedded in a standalone application</li>
+</ol>
+
+<h2>
+2.4 Preferences System</h2>
+<p>The Preferences System will allow the learner to customize the learning
+experience to their own learning style. The Authoring Tool will allow the
+author to specify author preferences for presentation of materials (such
+as formatting and placement of caption text), and the Player will allow
+the learner to specify their own preferences for these features. The Preferences
+System, in addition to specifying what these preferences can be, will resolve
+the differences between the two, allowing the Player to present the material
+as optimally as possible.</p>
+<h2>
+2.5 Learning Object Repository</h2>
+<p>The Learning Object Repository will contain the following types of learning
+objects:</p>
+<ul>
+<li>
+media as defined above in <a href="#_media">Section 2.1</a>;</li>
+
+<li>
+assembly objects;</li>
+
+<li>
+author presentation preferences documents</li>
+</ul>
+<p>In the first phase of the project, deletions from the repository will be
+forbidden. This is to allow us to defer dealing with the issue of assembly
+object that refer to learning objects which have been deleted from the
+repository.</p>
+<h1>
+3 File and Data Base Structures</h1>
+<p>[ Ed: this section will define the repository structure,&nbsp; the caption
+markup DTD, assembly object structure, etc. ]</p>
+<p>The assembly will take the form of an XML file. The assembly object
+may contain the following types of information:</p>
+<ul>
+<li>
+one or more references to learning objects</li>
+
+<li>
+zero or more references to other assembly objects</li>
+
+<li>
+one reference to author presentation preferences</li>
+
+<li>
+SMIL timing information</li>
+
+<li>
+the maximum possible duration of the presentation of the materials referenced
+by the assembly object</li>
+
+<li>
+meta information</li>
+</ul>
+<p> References contained in the assembly object may be categorized into
+two different types of references: time dependent, and not time dependent.</p>
+<h1>
+4&nbsp; Major Internal Data Structures</h1>
+<p>[ Ed:&nbsp; this section will define any internal data structures ]</p>
+<h1>
+5&nbsp; Module Descriptions</h1>
+<p>[ Ed:&nbsp; this section will contain the class structures: data member,
+method declarations and description, and psuedocode algorithms, if appropriate
+]</p>
+<h2>
+5.1 Authoring Tool</h2>
+
+<h3>
+5.1.1 Media Editors</h3>
+<p>Below, the specific editing functions required for each media type are
+described. In future revisions of this document, these will likely be presented
+as methods of the editor classes.</p>
+<h4>
+Main video</h4>
+
+<dl>
+<dt>
+positioning</dt>
+
+<dd>
+The author will be able to position the main video window within the canvas</dd>
+
+<dt>
+size</dt>
+
+<dd>
+The author will be able to define the size of the main video window. The
+aspect ratio of the video will be preserved.</dd>
+
+<dt>
+presence and ordering of structural components</dt>
+
+<dd>
+If the main video is divided up into structural parts such as lessons,
+topics, exercise, etc., the author will be able to specify the order of
+presentation of the parts, and may choose not to present any given part.</dd>
+</dl>
+
+<h4>
+Captions</h4>
+
+<dl>
+<dt>
+basic text editing functions</dt>
+
+<dd>
+Basic text editing functions will be provided to allow the author to modify
+the text in a caption phrase.</dd>
+
+<dt>
+font face, colour, style, size</dt>
+
+<dd>
+The author will be able to alter the following font characteristics: font
+face, colour, style and size.</dd>
+
+<dt>
+background colour, transparency, shape</dt>
+
+<dd>
+The author will be able to define the background colour for the caption,
+as well at the transparency of that colour. The author will select a background
+shape from a preset list of available options.</dd>
+
+<dt>
+line wrapping</dt>
+
+<dd>
+&nbsp;</dd>
+
+<dt>
+position</dt>
+
+<dd>
+The author will be able to define the position of the block of caption
+text on the canvas. Ideally, they will accomplish this by dragging it to
+the desired location. The position information for caption text will be
+defined relative to the main video.</dd>
+
+<dt>
+links</dt>
+
+<dd>
+Authors may attach hyperlinks to selected caption text. Ideally, they will
+accomplish this by selecting the desired link text from the current caption,
+invoking a dialog, and entering the desired URL.</dd>
+
+<dt>
+layer</dt>
+
+<dd>
+The author will define the layer for the text caption.</dd>
+</dl>
+Note regarding editing of time codes: The time codes for text captions
+will not be editable. However, time codes will be editable for other media
+types, so it is likely that the ability to edit time codes will be incorporated
+into the caption media editor, though disabled for text captions in some
+way.
+<br>&nbsp;
+<br>&nbsp;
+<h4>
+Audio descriptions</h4>
+
+<dl>
+<dt>
+time codes: in, pause, out</dt>
+
+<dd>
+The author will be able to specify the time-in (the time code at which
+to begin playback of the audio description segment), pause time (the time
+at which to suspend playback of the main video (and sign translation if
+applicable) if the audio description is not complete), and the time-out
+(the time at which the audio description ends). Ideally, any time code
+editing will be in the form of a graphical timeline representation in which
+the author can drag a representation of the audio description clip to the
+desired location.</dd>
+
+<dt>
+volume</dt>
+
+<dd>
+The author will define the default playback volume for the audio description.
+The value will be a real number in the range of 0 to 1, and will be considered
+by the Player as relative to maximum system volume.</dd>
+
+<dt>
+record</dt>
+
+<dd>
+The author will have the capability of recording audio for use in audio
+descriptions. The audio descriptions will be saved into&nbsp;<span class="code">.wav</span>
+files.</dd>
+</dl>
+
+<h4>
+Sign translation</h4>
+
+<dl>
+<dt>
+positioning</dt>
+
+<dd>
+The author will be able to define the position of the sign translation
+video(s) on the canvas. Ideally, they will accomplish this by dragging
+it to the desired location. The position information for sign translations
+will be defined relative to the main video.</dd>
+
+<dt>
+size</dt>
+
+<dd>
+The author will control the size of the sign translation video. Ideally,
+they will accomplish this by dragging a corner to a desired location. The
+aspect ratio of the video will be maintained.</dd>
+
+<dt>
+layer</dt>
+
+<dd>
+The author will define the layer for the text caption.</dd>
+
+<dt>
+time codes: in, out (if the video is loaded in multiple segments)</dt>
+
+<dd>
+The author will be able to specify the time-in (the time code at which
+to begin playback of the sign translation segment) and the time-out (the
+time at which the sign translation video ends). Ideally, any time code
+editing will be in the form of a graphical timeline representation in which
+the author can drag a representation of the sign translation clip to the
+desired location.</dd>
+</dl>
+
+<h4>
+Markers</h4>
+A marker is a form of visual indicator on screen, intended to draw the
+viewer's attention to a particular area.&nbsp; The marker media type will
+include a selection of predefined graphics, such as a clear yellow area,
+an arrow, or a red circle.
+<dl>
+<dt>
+selection from available predefined graphics</dt>
+
+<dd>
+The author will be able to select from a list of pre-defined graphical
+images for use as markers. This may be accomplished through a pull-down
+menu of some sort.</dd>
+
+<dt>
+load custom graphic</dt>
+
+<dd>
+The author may load a graphical image from an external source, using a
+standard file open dialog.</dd>
+
+<dt>
+time codes: in, out</dt>
+
+<dd>
+The author will be able to specify the time-in (the time code at which
+to begin playback of the marker) and the time-out (the time at which the
+marker should disappear). Ideally, any time code editing will be in the
+form of a graphical timeline representation in which the author can drag
+a representation of the marker to the desired location.</dd>
+
+<dt>
+position</dt>
+
+<dd>
+The author will be able to define the position of the marker on the canvas.
+Ideally, they will accomplish this by dragging it to the desired location.
+The position information for markers will be defined relative to the main
+video.</dd>
+
+<dt>
+size</dt>
+
+<dd>
+The author will control the size of the marker. Ideally, they will accomplish
+this by dragging a corner to a desired location. The aspect ratio of the
+marker will not be maintained.</dd>
+
+<dt>
+transparency</dt>
+
+<dd>
+The author will specify, through a slider, the transparency of the graphic
+used as a marker.</dd>
+</dl>
+
+<h4>
+Graphics</h4>
+
+<dl>
+<dt>
+load</dt>
+
+<dd>
+The author may load a graphical image from an external source, using a
+standard file open dialog.</dd>
+
+<dt>
+position</dt>
+
+<dd>
+The author will be able to define the position of the image on the canvas.
+Ideally, they will accomplish this by dragging it to the desired location.
+The position information for images will be defined relative to the overall
+canvas.</dd>
+
+<dt>
+size</dt>
+
+<dd>
+The author will control the size of the image. Ideally, they will accomplish
+this by dragging a corner to a desired location. The author will have the
+option of locking the aspect ratio if desired.</dd>
+
+<dt>
+links</dt>
+
+<dd>
+Authors may attach hyperlinks to images. Ideally, they will accomplish
+this by selecting the image, invoking a dialog, and entering the desired
+URL.</dd>
+
+<dt>
+layer</dt>
+
+<dd>
+The author will define the layer for the image.</dd>
+
+<dt>
+time codes: in, out</dt>
+
+<dd>
+The author will be able to specify the time-in (the time code at which
+to display the image) and the time-out (the time at which the image should
+disappear). Ideally, any time code editing will be in the form of a graphical
+timeline representation in which the author can drag a representation of
+the image to the desired location.</dd>
+
+<dt>
+transparency</dt>
+
+<dd>
+The author will specify, through a slider, the transparency of the image.</dd>
+</dl>
+
+<h4>
+Annotations</h4>
+Annotations are almost identical to text captions, except that they will
+not include graphics, and the author must be able to associate time codes
+with the annotations. Likely, the same underlying editor class will be
+used for both media types.
+<dl>
+<dt>
+basic text editing functions</dt>
+
+<dd>
+Basic text editing functions will be provided to allow the author to enter
+or modify an annotation.</dd>
+
+<dt>
+font face, colour, style, size</dt>
+
+<dd>
+The author will be able to alter the following font characteristics: font
+face, colour, style and size.</dd>
+
+<dt>
+background colour, transparency, shape</dt>
+
+<dd>
+The author will be able to define the background colour for the annotation,
+as well at the transparency of that colour. The author will select a background
+shape from a preset list of available options.</dd>
+
+<dt>
+line wrapping</dt>
+
+<dd>
+&nbsp;</dd>
+
+<dt>
+links</dt>
+
+<dd>
+Authors may attach hyperlinks to selected annotation text. Ideally, they
+will accomplish this by selecting the desired link text from the annotation,
+invoking a dialog, and entering the desired URL.</dd>
+
+<dt>
+position</dt>
+
+<dd>
+The author will be able to define the position of the annotation on the
+canvas. Ideally, they will accomplish this by dragging it to the desired
+location. The position information for annotation will be defined relative
+to the canvas.</dd>
+
+<dt>
+layer</dt>
+
+<dd>
+The author will define the layer for the annotation.</dd>
+
+<dt>
+time code</dt>
+
+<dd>
+The author will be able to specify the time-in (the time code at which
+to display the annotation) and the time-out (the time at which the annotation
+should disappear). Ideally, any time code editing will be in the form of
+a graphical timeline representation in which the author can drag a representation
+of the annotation to the desired location.</dd>
+</dl>
+
+<h4>
+Other</h4>
+The API will be documented sufficiently that in the future, others may
+choose to add the facility to use currently not included media types.
+<h3>
+5.1.2 Structural Mark-up</h3>
+The authoring tool itself will not provide the capability to do structural
+mark-up (i.e. the identification of hierarchical structure such as Lesson,
+Topic, Example, Exercise, etc.), but it will link to an external tool which
+is capable of carrying out this functionality. The authoring tool will
+be aware of the structural mark-up, and will present the material to the
+author according to the defined structure.
+<h3>
+5.1.3 General Notes</h3>
+The authoring tool will <i>not</i> be responsible for preventing 'conflicts'
+between the various elements on the screen. For example, the authoring
+tool will not prevent a sign language video image from being obscured by
+the main video, or by a caption or annotation. This will be the responsibility
+of the author. It is possible that in future versions of the software,
+this functionality may be implemented.
+<h2>
+5.2 Player</h2>
+&nbsp;
+<h2>
+5.3 User Preferences System</h2>
+&nbsp;
+<h2>
+5.4 Learning Objects Repository</h2>
+&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p>
+<hr width="80%"></center>
+
+</body>
+</html>

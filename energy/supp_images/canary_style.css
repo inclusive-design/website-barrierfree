@@ -1,0 +1,15 @@
+P {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+H1 {
+	COLOR: #FFFFFF; FONT-FAMILY: verdana, arial, helvetica, sans-serif; clip:    rect(   )
+}
+H3 {
+	FONT-SIZE: 14px; COLOR: #6e2109; FONT-FAMILY: verdana,arial,helvetica,sans-serif
+}
+LI {
+COLOR: #333333; FONT-FAMILY: verdana, arial, helvetica, sans-serif; font-size: 12px
+}
+.uncertain_digit {  color: #FF0000}
+.decimal_point {  color: #0000FF}
+dt {  font-weight: bold}

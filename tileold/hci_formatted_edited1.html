@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML lang="eng">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>HCI International 2003 papers</TITLE>
+
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080" bgcolor="#FFFFFF" text="#000000" alink="#000000">
+<B><FONT SIZE=4>
+<P ALIGN="CENTER">A-Prompt: Promoting the Habituation of Accessible Web Authoring</P>
+</FONT> </B> 
+<CENTER>
+  <TABLE CELLSPACING="0" BORDER="0" CELLPADDING="7" WIDTH="568" summary="This layout table is used to create 2 columns of text">
+    <TR> 
+      <TD WIDTH="50%" height="87" VALIGN="TOP"> 
+        <P ALIGN="CENTER">Chris Ridpath and Jutta Treviranus<FONT SIZE=2> <br>
+          <br>
+          </FONT> Adaptive Technology Resource Center,<br>
+          University Of Toronto, Canada<br>
+        </P></TD>
+    </TR>
+  </TABLE>
+</CENTER>
+<blockquote> 
+  <p><B>Abstract</B></p>
+  <p align="JUSTIFY"><FONT SIZE=2>A-Prompt is a tool that enables web developers 
+    to check for and repair barriers to access in their developed site pages. 
+    A-Prompt was developed with three principles in mind: automation, integration 
+    and education. The result is a web content accessibility checking and repair 
+    tool. Survey results indicate that the founding principles of A-Prompt are 
+    sound and that further development of the tool is merited. Issues related 
+    to development, integration and standardization of A-Prompt are discussed 
+    and future directions for the tool’s development are considered.</FONT></p>
+</blockquote>
+<ol>
+  <li><B><FONT SIZE=3>Introduction</FONT></B></li>
+  <FONT SIZE=2> 
+  <P ALIGN="JUSTIFY">A-Prompt had its origin, in 1995, in a collaborative project 
+    between the Adaptive Technology Resource Centre (ATRC) and SoftQuad Inc. The 
+    aim was to build prompting and guidance regarding accessibility directly into 
+    the most popular HTML authoring tool at the time, namely: HoTMetaL. Since 
+    then, thanks to funding from National Institute on Disability and Rehabilitation 
+    Research (NIDRR), A-Prompt has been recreated as a free standing evaluation 
+    and repair application and as a DLL that can be integrated into HTML authoring 
+    tools to test for both W3C Web Content Accessibility Guidelines compliance 
+    and US Rehab 508 compliance.</P>
+  <P ALIGN="JUSTIFY">Throughout its evolution A-Prompt has always been designed 
+    with three precepts in mind: 
+  <ul type="disc">
+    <li>automate as many evaluations and repairs as possible so that the author’s 
+      energies can be devoted to evaluations and repairs requiring human judgment,</li>
+    <LI>wherever and whenever possible integrate support for access into the initial 
+      authoring process, and</LI>
+    <LI>educate authors on accessible design, but also design the tool so that 
+      even authors without the knowledge or the will necessary to produce accessible 
+      documents will be supported in creating accessible web sites.</LI></P>
+    
+  </ul>
+  <P ALIGN="JUSTIFY">A-Prompt exemplifies the implementation of a carefully developed 
+    set of heuristics and diagnostics to identify and repair barriers to access. 
+    The A-Prompt techniques form the basis for and closely follow the Techniques 
+    for Accessibility and Evaluation and Repair Tools (AERT) developed by the 
+    Evaluation and Repair Tools Working Group of the W3C Web Accessibility Initiative. 
+    While the AERT techniques are now being integrated with the documentation 
+    of the Authoring Tools Working Group and the Web Content Accessibility Guidelines 
+    Working Group, it remains significant as an outline of strategies that evaluation 
+    and repair tools may use to uncover accessibility problems and repair them.</P>
+  <DIR> 
+  <P ALIGN="JUSTIFY">These principles form the basis of objectives for the A-Prompt 
+    project: to enable seamless checking for accessibility issues in web development 
+    environments, to repair and log repair decisions so that burden on the author 
+    is minimized, to help develop standard practices for issue detection and repair 
+    and to move towards integration of A-Prompt functionality into commercial 
+    development environments.</P>
+  <P ALIGN="JUSTIFY"></P>
+  </DIR><B><FONT SIZE=4> </B></FONT> 
+  <li><FONT SIZE=3><B>Survey Support for A-Prompt Objectives</B></FONT></li>
+  <FONT SIZE=2><FONT SIZE=2> 
+  <P ALIGN="JUSTIFY">Before starting on the development for version 2 of A-Prompt, 
+    the ATRC undertook a study to determine user needs. A form containing 28 questions 
+    was made available at the A-Prompt web site that allowed users to enter general 
+    and specific data regarding their A-Prompt use. An email inviting users to 
+    complete the form was distributed to several listserves and our mailing list 
+    of A-Prompt users. </P>
+  </FONT></FONT> 
+  <p><FONT SIZE=2><B>Participants</B></FONT></p>
+</ol>
+<blockquote> 
+  <p align="JUSTIFY"><FONT SIZE=2><FONT SIZE=2>Over 70 users completed the survey 
+    to date. Fifty-two participants describe their development experience as expert 
+    or intermediate and half (35) of the respondents are website managers or content 
+    creators.</FONT></FONT></p>
+  <p><FONT SIZE=2><B>2.2 Results and Discussion</B></FONT></p>
+</blockquote>
+<ol start="3">
+  <FONT SIZE=2><FONT SIZE=2> 
+  <P ALIGN="JUSTIFY">In our survey we asked users about their A-Prompt use and 
+    discovered that use declined over time (see figure 1). </P>
+  <P ALIGN="JUSTIFY"></P>
+  <P ALIGN="JUSTIFY"> <IMG SRC="Image2.gif" alt="Bar graph of Aprompt use over time" WIDTH="483" HEIGHT="414"></P>
+  <B> 
+  <P ALIGN="LEFT">Figure 1: A-Prompt use over time</P>
+  </B></FONT> <FONT SIZE=2> 
+  <P ALIGN="JUSTIFY">A central goal of A-Prompt is to educate users about accessibility 
+    issues and to train them in creating more accessible web pages. The product 
+    contains extensive help files that not only identify the accessibility problems 
+    but describe how and why they must be corrected. Each dialog that repairs 
+    an accessibility problem includes text that describes the problem and offers 
+    suggestions for making the repair. Our intention was that eventually the user 
+    would modify their authoring practices to create more accessible content. 
+    The reason that most users (31%) gave as the reason for their decreased use 
+    was that they could now find and repair accessibility problems themselves 
+    indicating that our educational approach was working.</P>
+  <P ALIGN="JUSTIFY">In our user survey, we asked users why they were checking 
+    for accessibility and found that the largest response was to make the site 
+    more useful (figure 2). While government regulations and company policy were 
+    major factors, general usability and a personal concern for people with disabilities 
+    encouraged more people to consider accessibility checking. </P>
+  <P ALIGN="JUSTIFY"></P>
+  <P ALIGN="JUSTIFY"> <IMG SRC="Image3.gif" alt="Bar graph of main reason you are checking for accessibility" WIDTH="483" HEIGHT="414"></P>
+  <B> 
+  <P ALIGN="LEFT">Figure 2: Main reason people check for accessibility problems</P>
+  </B> 
+  <P ALIGN="JUSTIFY"></P>
+  <P ALIGN="JUSTIFY">There exist several legislations throughout the world that 
+    force web authors to make their sites more accessible. In Canada there is 
+    the Common Look And Feel guidelines that apply to all federally governed sites. 
+    The United States has section 508 of The Rehabilitation act, Germany has enacted 
+    BITV and there are others. The result of these laws has been to increase the 
+    awareness of web accessibility and to encourage web authors to include accessibility 
+    as part of their authoring process. While these laws have been necessary, 
+    the A-Prompt philosophy has been to encourage accessibility as part of general 
+    usability. Documentation in the product has stressed that as a site becomes 
+    more accessible to people with disabilities, the site is also more accessible 
+    to all users. Sites that comply with accessibility standards offer advantages 
+    over non-compliant sites. Users can find information quicker, the site displays 
+    well on a wider range of user agents and a wider population can access the 
+    site. We have found that business leaders, while cognizant of government regulations, 
+    are more likely to listen to arguments that will encourage more and happier 
+    customers. The response to this survey question has further strengthened our 
+    belief in the philosophy that accessibility is usability and that increased 
+    usability is a helpful selling point for businesses unwilling to change their 
+    web sites for accessibility reasons alone.</P>
+  <P ALIGN="JUSTIFY"></P>
+  </FONT><B><FONT SIZE=4> </B></FONT>
+  <li><FONT SIZE=2><B><font size="3">A-Prompt Development and Integration</font></B></FONT></li>
+  <FONT SIZE=2> 
+  <P ALIGN="JUSTIFY">The key A-Prompt objective is to promote creation of accessible 
+    web content. Several factors are associated with meeting this goal successfully: 
+    developer needs and acceptance, site owner business objectives, standards 
+    of practice and transparency of the tool. Each of these factors has been addressed 
+    by the development team in a variety of ways. The development of A-Prompt 
+    and actions taken by the ATRC to enable successful implementation and acceptance 
+    of A-Prompt are outlined in the following sections.</P>
+  </FONT> 
+</ol>
+<blockquote> 
+  <p><B><FONT SIZE=2> Public Interface for A-Prompt and Integration with Other 
+    Tools</FONT></B></p>
+</blockquote>
+<OL>
+  <FONT SIZE=2> 
+  <P ALIGN="JUSTIFY">A-Prompt contains a public Application Programming Interface 
+    (API) that allows other programs to integrate and use the A-Prompt functionality. 
+    The API takes the form of a simple DLL with exported function calls that may 
+    be accessed by programs written in most common languages such as C, C++ or 
+    Visual Basic. It was our intention that HTML authoring programs would make 
+    use of this API and integrate the A-Prompt functionality much like a traditional 
+    spell checker utility. We envisioned that as the user authored their HTML 
+    document, A-Prompt would be called on a periodic basis to validate and repair 
+    its accessibility. We’ve had a great deal of interest in the API but have 
+    been unable to announce that a commercial HTML editor program has integrated 
+    A-Prompt. </P>
+  </FONT><FONT SIZE=2><B> Future development of the API</LI> </B> 
+  <P ALIGN="JUSTIFY">Version 2 of A-Prompt will contain an updated version of 
+    the API that exposes more components of the program’s functionality. It will 
+    be possible for host programs to have fine control over each repair that A-Prompt 
+    performs. The host program will also be able to control which accessibility 
+    checks and heuristics are applied in A-Prompt’s evaluation engine.</P>
+  </FONT> 
+</OL>
+<blockquote> 
+  <p><B><font size="2"> Open Standards for Checking and Repair</font></B></p>
+</blockquote>
+<OL>
+  <FONT SIZE=2> 
+  <P ALIGN="JUSTIFY">A common complaint from users performing accessibility checking 
+    is the lack of consistency between validation tools. All of the current accessibility 
+    checking software programs use different testing criteria. This lack of consistency 
+    is discouraging to users and weakens the acceptance of accessibility guidelines. 
+    If we liken accessibility validation to the use of a spell checker then we 
+    must promote the use of a single dictionary of testing criteria for all tools.</P>
+  <P ALIGN="JUSTIFY">A-Prompt’s accessibility checking is based upon the Web Accessibility 
+    Initiative (WAI) technical document titled Accessibility Evaluation and Repair 
+    Techniques (AERT). This document lists, as much as possible, all the checks 
+    that must be performed to validate a document for compliance with the WAI’s 
+    Web Content Accessibility Guidelines WCAG). Unfortunately, not all the WAI 
+    guidelines can be validated by a series of checks and not all are detailed 
+    in the AERT. This gap has lead to the variance in the checking techniques 
+    used by different software tools.</P>
+  <P ALIGN="JUSTIFY">The ATRC has been working with other accessibility validation 
+    tools to create a common set of algorithms for HTML accessibility. If adopted, 
+    this common set would also allow for the interoperability of checking tools. 
+    For example, a tool that just performs accessibility evaluations could pass 
+    invalid HTML code to a tool, like A-Prompt, that can repair the HTML code.</P>
+  <P ALIGN="JUSTIFY">Each accessibility check that is performed by A-Prompt will 
+    be fully exposed and documented so that other checking programs can determine 
+    our compliance to accessibility standards. These checks will be made available 
+    to the user so they can modify or create their own standards. For example, 
+    some companies have currently adopted a low conformance rating but are moving 
+    towards a higher standard and will to include some, but not all, of the higher 
+    standard’s accessibility checks. A-Prompt’s checklist is stored in a separate 
+    file using the EARL standard format. The checklist file may be easily shared 
+    amongst users so they have a common set of accessibility checks. The checklist 
+    file may also be used in the creation of accessibility validation reports 
+    that will then be more accurate and detailed.</P>
+  </FONT> 
+</OL>
+<blockquote> 
+  <p><B><font size="2"> Expanded Registry &amp; EARL</font></B></p>
+  <p align="JUSTIFY"><FONT SIZE=2>As part of the accessibility validation process, 
+    the user must make decisions about many of the document components. For example, 
+    if an image appears in an HTML document, the user must decide if the image 
+    is complex enough that it requires a textual description beyond what is contained 
+    in the short ‘alternate’ text. Even a relatively simple document may require 
+    dozens of user decisions in order to make a complete evaluation. These user 
+    decisions must be recorded and stored so the user is not asked to repeat their 
+    decisions each time the document is evaluated.</FONT></p>
+  <p align="JUSTIFY"><FONT SIZE=2>A standard method of recording this accessibility 
+    evaluation information has been developed and is used by A-Prompt. Called 
+    EARL, for Evaluation And Report Language, it is a Resource Description Language 
+    (RDF) dialect that allows accessibility checking tools to state exact information 
+    about their evaluations. Information stored in this standard format may be 
+    re-used by other tools to provide other accessibility reports. A-Prompt’s 
+    use of EARL is intended to reduce the number of redundant decisions that are 
+    required for a complete accessibility evaluation.</FONT></p>
+</blockquote>
+<FONT SIZE=2> </FONT> 
+<ol start="4">
+  <li><B><FONT SIZE=4><font size="3">Conclusion</font></FONT></B></li>
+</ol>
+<blockquote>
+  <p align="JUSTIFY"><FONT SIZE=2>Ideally, all Web authoring interfaces, would 
+    in themselves provide utilities to prompt the creation of accessible content, 
+    this would insure that accessible authoring does not require retrofitting 
+    and becomes a naturally integrated, habitual step in creating resources for 
+    the web. Until this ideal is the norm rather than the exception, A-Prompt 
+    and systems like it provide the tools and model developers need to produce 
+    accessible web sites. Throughout it’s relatively long history, A-Prompt has 
+    been used to pilot and model the support of accessible authoring practices 
+    and has thereby played an important role in the market and in the efforts 
+    of the Web Accessibility Initiative. Ongoing development of A-Prompt is planned 
+    so that the tool will continue to enable developers using new techniques such 
+    as XML and dynamic web content or courseware environments to continue to create 
+    accessible content. </FONT></p>
+</blockquote>
+</BODY>
+</HTML>

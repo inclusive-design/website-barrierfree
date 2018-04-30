@@ -1,0 +1,195 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<lom xmlns = "http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation = "http://www.imsglobal.org/xsd/imsmd_rootv1p2p1  imsmd_rootv1p2p1.xsd">
+	<general>
+		<identifier>This will be replaced when the learning object is submitted to the repository</identifier>
+		<title>
+			<langstring>Potential Energy due to Condition</langstring>
+		</title>
+		<catalogentry>
+			<catalog>Replace this text with the name of a catalog (e.g. "ISBN")</catalog>
+			<entry>
+				<langstring>Replace this entry with the value of the catalog entry (e.g. the ISBN number)</langstring>
+			</entry>
+		</catalogentry>
+		<language>English</language>
+		<description>
+			<langstring>Simulation, An object or system with potential energy (Ep) has the potential to do work, due to its position or condition. </langstring>
+		</description>
+	</general>
+	<lifecycle>
+		<version/>
+		<contribute>
+			<role>
+				<source>
+					<langstring>LOMv1.0</langstring>
+				</source>
+				<value>
+					<langstring>Content Provider</langstring>
+				</value>
+			</role>
+			<centity>
+				<vcard>Fill in the vCard data of the contributor here</vcard>
+			</centity>
+			<date>
+				<datetime>Replace this text with the date of the contribution e.g. "2001-02-01"</datetime>
+			</date>
+		</contribute>
+	</lifecycle>
+	<metametadata>
+		<identifier/>
+		<catalogentry>
+			<catalog/>
+			<entry>
+				<langstring/>
+			</entry>
+		</catalogentry>
+		<contribute>
+			<role>
+				<source>
+					<langstring>LOMv1.0</langstring>
+				</source>
+				<value>
+					<langstring>Creator</langstring>
+				</value>
+			</role>
+		</contribute>
+		<centity>
+			<vcard>&lt;vcard>BEGIN:vCard N:Pruski;Oskar:END:vCard&lt;/vcard></vcard>
+		</centity>
+		<date>
+			<datetime>2004-02-17</datetime>
+		</date>
+		<metadatascheme>CanCore 1.0</metadatascheme>
+		<metadatascheme>IMS MD 1.2.1</metadatascheme>
+		<language>English</language>
+	</metametadata>
+	<technical>
+		<format>FLA</format>
+		<size>164000</size>
+		<location>Replace this text with a URL to the resource</location>
+		<otherplatformrequirements>
+			<langstring>Macromedia Flash Player is required and downloadable from www.macromedia.com</langstring>
+		</otherplatformrequirements>
+		<duration>
+			<datetime>10 seconds</datetime>
+		</duration>
+	</technical>
+	<educational>
+		<learningresourcetype>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Simulation</langstring>
+			</value>
+		</learningresourcetype>
+		<learningresourcetype>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Simulation</langstring>
+			</value>
+		</learningresourcetype>
+		<intendedenduserrole>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Learner</langstring>
+			</value>
+		</intendedenduserrole>
+		<intendedenduserrole>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Learner</langstring>
+			</value>
+		</intendedenduserrole>
+		<context>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Secondary Education</langstring>
+			</value>
+		</context>
+		<context>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>Secondary Education</langstring>
+			</value>
+		</context>
+		<typicalagerange>
+			<langstring>Teen to Adult</langstring>
+		</typicalagerange>
+		<language>English</language>
+	</educational>
+	<rights>
+		<cost>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>no</langstring>
+			</value>
+		</cost>
+		<copyrightandotherrestrictions>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring>yes</langstring>
+			</value>
+		</copyrightandotherrestrictions>
+		<description>
+			<langstring>Consent by the programmer/developer</langstring>
+		</description>
+	</rights>
+	<relation>
+		<kind>
+			<source>
+				<langstring>Dublin Core</langstring>
+			</source>
+			<value>
+				<langstring>IsPartOf</langstring>
+			</value>
+		</kind>
+		<resource>
+			<identifier>This will be replaced when the learning object is submitted to the repository</identifier>
+			<catalogentry>
+				<catalog>Replace this text with the name of a catalog (e.g. "ISBN")</catalog>
+				<entry>
+					<langstring>Replace this entry with the value of the catalog entry (e.g. the ISBN number)</langstring>
+				</entry>
+			</catalogentry>
+		</resource>
+	</relation>
+	<classification>
+		<purpose>
+			<source>
+				<langstring>LOMv1.0</langstring>
+			</source>
+			<value>
+				<langstring> Educational Objective</langstring>
+			</value>
+		</purpose>
+		<taxonpath>
+			<source>
+				<langstring/>
+			</source>
+			<taxon>
+				<id/>
+				<entry>
+					<langstring/>
+				</entry>
+			</taxon>
+		</taxonpath>
+		<keyword>
+			<langstring>potential energy, position, condition, spring example, force, simulation, Physics</langstring>
+		</keyword>
+	</classification>
+</lom>

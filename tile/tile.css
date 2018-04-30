@@ -1,0 +1,212 @@
+tr.menu { 
+   font-family: Arial;
+   font-size: 100%;
+   font-weight: bold;   
+   text-decoration: none;
+   color: white; 
+   padding-right: 0.3em;
+   padding-left: 0.8em;
+   vertical-align: middle;
+} 
+
+tr.menu a { 
+   font-family: Arial;
+   font-size: 100%;
+   font-weight: bold;   
+   text-decoration: none;
+   color: white; 
+   padding-right: 0.3em;
+   padding-left: 0.8em;
+   vertical-align: middle;
+} 
+
+tr.menu a:hover { 
+   text-decoration: none;
+   font-family: Arial;
+   font-size: 100%;
+   font-weight: bold;
+   color: #EAA337; 
+} 
+
+tr.bot {
+   font-family: Arial;
+   font-size: 90%;
+   font-weight: bold;   
+   text-decoration: none;
+   color: white; 
+   vertical-align: middle;
+}
+
+tr.bot a { 
+   font-family: Arial;
+   font-size: 90%;
+   font-weight: bold;   
+   text-decoration: none;
+   color: white; 
+   vertical-align: middle;
+} 
+
+tr.bot a:hover { 
+   text-decoration: none;
+   font-family: Arial;
+   font-size: 90%;
+   font-weight: bold;
+   color: #EAA337; 
+} 
+
+.border {border-width: 2px; border-color: #333366; border-style: solid;}
+
+body{
+	  font-family: Verdana;
+	  font-size: 80%;
+}
+
+
+a:hover { 
+      font-family: Verdana;
+	  font-size: 85%;
+      text-decoration: underline overline;
+      color: #CC6600;
+} 
+
+a.side, a.side:link, a.side:visited, a.side:active{ 
+   font-family: Arial;
+   font-size: 85%;
+   font-weight: bold;   
+   text-decoration: none;
+   color: #626262; 
+   letter-spacing: 0.2em;
+   vertical-align: middle;
+} 
+
+a.side:hover { 
+   text-decoration: none;
+   font-family: Arial;
+   font-size: 85%;
+   font-weight: bold;
+   color: #000000; 
+   text-decoration: none;
+
+} 
+
+p {
+	  font-family: Verdana, helvetica, arial;
+	     font-size: 80%;
+
+}
+
+ h2 {
+    font-family: Verdana;
+   font-size: 11pt;
+   font-weight: bold;   
+}
+
+a.indexside, a.indexside:link, a.indexside:visited, a.indexside:active { 
+   font-family: Geneva;
+   font-size: 90%;
+   font-weight: bold;   
+   padding-left: 0.5em;
+} 
+
+.side {
+   font-family: Geneva;
+   font-size: 80%;
+   padding-left: 0.5em;
+
+}
+
+.side2{
+   font-family: Geneva;
+   font-size: 100%;
+   color: #000000; 
+   font-weight: bold;   
+
+}
+
+tr.contact {
+
+   font-family: Verdana;
+   font-size: 90%;
+}
+
+
+tr.contact a  {
+
+    font-family: Verdana;
+   font-size: 90%;
+}
+
+tr.contact a:hover  {
+
+    font-family: Verdana;
+   font-size: 90%;
+   text-decoration:underline overline;
+   colour: #CC6600
+}
+
+
+.text {
+    font-family: Verdana;
+   font-size: 90%;
+}
+
+ul.bullet, li {
+    font-family: Verdana;
+   font-size: 90%;
+   color:#000000;
+   }
+
+ul.bullet a{
+    font-family: Verdana;
+   font-size: 90%;
+   color:#000000;
+   }
+
+ul.bullet a:hover{
+    font-family: Verdana;
+   font-size: 90%;
+    text-decoration: underline overline;
+      color: #CC6600;
+   }
+
+span.top{
+   font-family: Arial;
+   font-size: 100%;
+   font-weight: bold;   
+   text-decoration: none;
+   color: #EAA337; 
+   vertical-align: middle;
+}
+
+a.inline  { 
+   text-decoration: none;
+   font-family: Verdana;
+   font-size: 90%;
+   text-decoration:underline
+
+} 
+
+a:hover { 
+   font-family: Verdana;
+   font-size: 90%;
+   color: #EAA337; 
+   text-decoration: underline overline;
+
+} 
+
+h3 {
+   font-family: Verdana;
+   font-size: 9pt;
+   font-style:italic
+   }
+
+h4 {
+   font-family: Verdana;
+   font-size: 9pt;}
+
+.bold {font-family: Verdana, helvetica, arial;
+	     font-size: 80%;
+		    font-weight: bold;   
+
+}
+
